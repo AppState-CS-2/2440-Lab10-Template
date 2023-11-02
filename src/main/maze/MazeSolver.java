@@ -5,13 +5,13 @@ import java.io.FileReader;
 import java.util.Scanner;
 
 /**
- * MazeGame2 is a backtracking version of MazeGame.
+ * MazeSolver is a backtracking version of MazeGame.
  * 
  * @author Mitch Parry
  * @author Willow Sapphire
  * @version 11/02/2023
  */
-public class MazeGame2
+public class MazeSolver
 {
     /**
      * The height of game maps.
@@ -34,7 +34,7 @@ public class MazeGame2
      * 
      * @param mazeFile name of the file containing the map.
      */
-    public MazeGame2(String mazeFile)
+    public MazeSolver(String mazeFile)
     {
         loadMaze(mazeFile);
     }

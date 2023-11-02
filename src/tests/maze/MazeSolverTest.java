@@ -15,7 +15,7 @@ import org.junit.Test;
  * @version 2015-06-02
  * 
  */
-public class MazeGame2Test
+public class MazeSolverTest
 {
     
     private static final int WIDTH = 99;
@@ -162,7 +162,7 @@ public class MazeGame2Test
     public void test1() throws FileNotFoundException
     {
         String mapFile = "data/mazeA1.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -177,7 +177,7 @@ public class MazeGame2Test
     public void test2() throws FileNotFoundException
     {
         String mapFile = "data/mazeA2.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -192,7 +192,7 @@ public class MazeGame2Test
     public void test3() throws FileNotFoundException
     {
         String mapFile = "data/mazeB1.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -207,7 +207,7 @@ public class MazeGame2Test
     public void test4() throws FileNotFoundException
     {
         String mapFile = "data/mazeB2.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -222,7 +222,7 @@ public class MazeGame2Test
     public void test5() throws FileNotFoundException
     {
         String mapFile = "data/mazeC1.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -237,7 +237,7 @@ public class MazeGame2Test
     public void test6() throws FileNotFoundException
     {
         String mapFile = "data/mazeC2.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         checkSolution(mapFile, solution);
     }
@@ -252,7 +252,7 @@ public class MazeGame2Test
     public void test7() throws FileNotFoundException
     {
         String mapFile = "data/mazeD1.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         assertNull("The file " + mapFile + " does not contain a solution.\n"
                 + "findSolution should return null.", solution);
@@ -268,7 +268,7 @@ public class MazeGame2Test
     public void test8() throws FileNotFoundException
     {
         String mapFile = "data/mazeD2.txt";
-        MazeGame2 game = new MazeGame2(mapFile);
+        MazeSolver game = new MazeSolver(mapFile);
         String solution = game.findSolution();
         assertNull("The file " + mapFile + " does not contain a solution.\n"
                 + "findSolution should return null.", solution);
@@ -287,7 +287,7 @@ public class MazeGame2Test
         for (int i = 1; i <= 2; i++)
         {
             String mapFile = "data/maze" + i + ".txt";
-            MazeGame2 game = new MazeGame2(mapFile);
+            MazeSolver game = new MazeSolver(mapFile);
             String solution = game.findSolution();
             if (noSolution[i - 1])
             {
@@ -315,7 +315,7 @@ public class MazeGame2Test
         for (int i = 5; i <= 6; i++)
         {
             String mapFile = "data/maze" + i + ".txt";
-            MazeGame2 game = new MazeGame2(mapFile);
+            MazeSolver game = new MazeSolver(mapFile);
             String solution = game.findSolution();
             if (noSolution[i - 5])
             {
